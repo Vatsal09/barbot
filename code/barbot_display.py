@@ -100,6 +100,32 @@ def buttonPress():
     if(select == "Margarita" && select2 = "Extra Boozy" ):
 
     if(select == "Vodka-Cranberry" && select2 = "Normal" ):
+		counter1 = halfCount*2 #1 oz vodka
+    	counter4 = halfCount*9 #4.5 oz cranberry
+    	try:
+    		if(counter2 != 0):
+    			motor1.on() #vodka
+    			counter1 = counter1 - 1
+    		
+    			
+    		if(counter3 != 0):
+    			motor4.on() #cranberry
+    			counter4 = counter4 - 1
+    		
+    		
+    		sleep(0.001)
+    		motor1.off()
+    		motor4.off()
+    		sleep(0.001)
+    		if(counter1 == 0 && counter4 ==0):
+    			counter1 = 0
+    			counter2 = 0
+    			counter3 = 0
+    			counter4 = 0
+    			break
+
+    	except KeyboardInterrupt:
+    		print("Catch 2")
 
     if(select == "Vodka-Cranberry" && select2 = "Extra Boozy" ):
 
@@ -173,5 +199,4 @@ startButton = Button(rightFrame, text='Start', font=titleFont, command=buttonPre
 startButton.pack(fill = BOTH, pady = 15)
 
 win.mainloop() # Loops forever
-
 
