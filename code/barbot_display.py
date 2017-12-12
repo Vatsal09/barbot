@@ -88,6 +88,10 @@ def buttonPress():
     		motor3.off()
     		sleep(0.001)
     		if(counter2 == 0 && counter3 ==0):
+    			counter1 = 0
+    			counter2 = 0
+    			counter3 = 0
+    			counter4 = 0
     			break
 
     	except KeyboardInterrupt:
