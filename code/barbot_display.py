@@ -103,12 +103,12 @@ def buttonPress():
 		counter1 = halfCount*2 #1 oz vodka
     	counter4 = halfCount*9 #4.5 oz cranberry
     	try:
-    		if(counter2 != 0):
+    		if(counter1 != 0):
     			motor1.on() #vodka
     			counter1 = counter1 - 1
     		
     			
-    		if(counter3 != 0):
+    		if(counter4 != 0):
     			motor4.on() #cranberry
     			counter4 = counter4 - 1
     		
@@ -125,7 +125,7 @@ def buttonPress():
     			break
 
     	except KeyboardInterrupt:
-    		print("Catch 2")
+    		print("Catch 3")
 
     if(select == "Vodka-Cranberry" && select2 = "Extra Boozy" ):
 
