@@ -71,47 +71,40 @@ def buttonPress():
     counter4 = 0
     drinks = {"Tequila Shot":(0,3,0,0),"Vodka Shot":(3,0,0,0),"Margarita":(0,3,9,0),"Winter Tropic":(3,0,3,3), "Vodka-Cranberry":(3,0,0,9),"Tequila Sunrise":(0,3,0,9),"Vodarita":(3,0,9,0),"Scarlet Knight Shot":(2,0,1,0)}
     bzlvl = {"Normal":1,"Extra Boozy":2}
-	
-	#if select ---
-	if select in drinks && select2 in bzlvl:
-		counter1 = halfCount * drinks[select][0] * bzlvl[select2]
-		counter2 = halfCount * drinks[select][1] * bzlvl[select2]
-		counter3 = halfCount * drinks[select][2]
-		counter4 = halfCount * drinks[select][3]		
-		#while loop
-		while true:
-			try:
-				if(counter1 > 0):
-					motor1.on()
-					counter1 = counter1 - 1
-				
-				if(counter2 > 0):
-					motor2.on()
-					counter2 = counter2 - 1
-				
-				if(counter3 > 0):
-					motor3.on()
-					counter3 = counter3 - 1
-					
-				if(counter4 > 0):
-					motor4.on()
-					counter4 = counter4 - 1
-				
-				sleep(0.001)
-				
-				motor1.off()
-				motor2.off()
-				motor3.off()
-				motor4.off()
-				
-				if (counter1 == 0 && counter2 == 0 && counter3 == 0 && counter4 == 0)
-					break
-				
-				sleep(0.001)
-				
-			except KeyboardInterrupt:
-				print("Keyboard Catch")			
-		#end loop
+    #if select ---
+    if select in drinks && select2 in bzlvl:
+        counter1 = halfCount * drinks[select][0] * bzlvl[select2]
+        counter2 = halfCount * drinks[select][1] * bzlvl[select2]
+        counter3 = halfCount * drinks[select][2]
+        counter4 = halfCount * drinks[select][3]
+        #while loop
+        while true:
+            try:
+                if(counter1 > 0):
+                    motor1.on()
+                    counter1 = counter1 - 1
+                if(counter2 > 0):
+                    motor2.on()
+                    counter2 = counter2 - 1
+
+                if(counter3 > 0):
+                    motor3.on()
+                    counter3 = counter3 - 1
+
+                if(counter4 > 0):
+                    motor4.on()
+                    counter4 = counter4 - 1
+                sleep(0.001)
+                motor1.off()
+                motor2.off()
+                motor3.off()
+                motor4.off()
+                if (counter1 == 0 && counter2 == 0 && counter3 == 0 && counter4 == 0):
+                    break
+                sleep(0.001)
+            except KeyboardInterrupt:
+                print("Keyboard Catch")
+                #end loop
 	#end if---
 
 def checkRadio2():
