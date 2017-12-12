@@ -17,7 +17,8 @@
 # Scarlet Knight Shot (1.5 oz vodka, 0.5 oz marg mix) - Size: 2
 
 ### IMPORTS
-
+from gpiozero import *
+from time import sleep
 from tkinter import *
 import tkinter.font
 
@@ -34,6 +35,18 @@ leftFrame.pack(side = LEFT, fill=BOTH, expand =1, anchor = W)
 rightFrame = Frame(win)
 rightFrame.pack(side = RIGHT, fill=BOTH, expand =1, anchor = W)
 
+### HARDWARE DEFINITIONS ###
+
+motor1 = LED(17) # Vodka
+motor2 = LED(27) # Tequila
+motor3 = LED(22) # Margarita Mix
+motor4 = LED(23) # Cranberry
+# By default they are active high so we turn them off until ready
+motor1.off()
+motor2.off()
+motor3.off()
+motor4.off()
+
 ### VARIABLE DEFINTIONS ###
 
 checkVal1 = StringVar()
@@ -46,10 +59,72 @@ checkVal2.set("L")
 def checkRadio():
     return "Radio button " + str(checkVal1.get()) + " selected"
 
+
 def buttonPress():
     select = checkRadio()
     select2 = checkRadio2()
     print(select + "\n" + select2)
+    halfCount= 12319
+    counter1 = 0
+    counter2 = 0
+    counter3 = 0
+    counter4 = 0
+    if(select == "Margarita" && select2 = "Normal" ):
+    	counter2 = halfCount*2 #1 oz teq
+    	counter3 = halfCount*6 #3 oz marg mix
+    	try:
+    		if(counter2 != 0):
+    			motor2.on()
+    			counter2 = counter2 - 1
+    		
+    			
+    		if(counter3 != 0):
+    			motor3.on()
+    			counter3 = counter3 - 1
+    		
+    		
+    		sleep(0.001)
+    		motor2.off()
+    		motor3.off()
+    		sleep(0.001)
+    		if(counter2 == 0 && counter3 ==0):
+    			break
+
+    	except KeyboardInterrupt:
+    		print("Catch 1")
+
+    if(select == "Margarita" && select2 = "Extra Boozy" ):
+
+    if(select == "Vodka-Cranberry" && select2 = "Normal" ):
+
+    if(select == "Vodka-Cranberry" && select2 = "Extra Boozy" ):
+
+    if(select == "Winter Tropic" && select2 = "Normal" ):
+
+    if(select == "Winter Tropic" && select2 = "Extra Boozy" ):
+
+    if(select == "Tequila Sunrise" && select2 = "Normal" ):
+
+    if(select == "Tequila Sunrise" && select2 = "Extra Boozy" ):
+
+    if(select == "Vodarita" && select2 = "Normal" ):
+
+    if(select == "Vodarita" && select2 = "Extra Boozy" ):
+
+    if(select == "Tequila Shot" && select2 = "Normal" ):
+
+    if(select == "Tequila Shot" && select2 = "Extra Boozy" ):
+
+    if(select == "Vodka Shot" && select2 = "Normal" ):
+
+    if(select == "Vodka Shot" && select2 = "Extra Boozy" ):
+
+    if(select == "Scarlet Knight Shot" && select2 = "Normal" ):
+
+    if(select == "Scarlet Knight Shot" && select2 = "Extra Boozy" ):
+
+
+
 def checkRadio2():
     return "Radio button " + str(checkVal2.get()) + " selected"
 
