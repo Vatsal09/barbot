@@ -69,29 +69,15 @@ def buttonPress():
     counter2 = 0
     counter3 = 0
     counter4 = 0
-	
-	# List:
-	# Tequila Shot (1.5 oz tequila) - Size: 1.5
-	# Vodka Shot (1.5 oz vodka) - Size: 1.5
-	# Margarita (1.5 oz tequila, 4 oz marg mix) - Size: 12
-	# Winter Tropic (1.5 oz vodka, 1.5 oz cranberry, 1.5 oz marg mix) - Size: 12
-	# Vodka-Cranberry (1.5 oz vodka, 4.5 oz cranberry) - Size: 10
-	# Tequila Sunrise (4 oz cranberry, 1.5 oz tequila) - Size: 10
-	# Vodarita (1.5 oz vodka, 3 oz marg mix) - Size: 10
-	# Scarlet Knight Shot (1.5 oz vodka, 0.5 oz marg mix) - Size: 2
-	
-	drinks = {"Tequila Shot":(0,3,0,0),"Vodka Shot":(3,0,0,0),"Margarita":(0,3,9,0),"Winter Tropic":(3,0,3,3),
-		"Vodka-Cranberry":(3,0,0,9),"Tequila Sunrise":(0,3,0,9),"Vodarita":(3,0,9,0),"Scarlet Knight Shot":(2,0,1,0)}
-	
-	bzlvl = {"Normal":1,"Extra Boozy":2}
+    drinks = {"Tequila Shot":(0,3,0,0),"Vodka Shot":(3,0,0,0),"Margarita":(0,3,9,0),"Winter Tropic":(3,0,3,3), "Vodka-Cranberry":(3,0,0,9),"Tequila Sunrise":(0,3,0,9),"Vodarita":(3,0,9,0),"Scarlet Knight Shot":(2,0,1,0)}
+    bzlvl = {"Normal":1,"Extra Boozy":2}
 	
 	#if select ---
 	if select in drinks && select2 in bzlvl:
 		counter1 = halfCount * drinks[select][0] * bzlvl[select2]
 		counter2 = halfCount * drinks[select][1] * bzlvl[select2]
 		counter3 = halfCount * drinks[select][2]
-		counter4 = halfCount * drinks[select][3]
-		
+		counter4 = halfCount * drinks[select][3]		
 		#while loop
 		while true:
 			try:
