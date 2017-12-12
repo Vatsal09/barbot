@@ -72,7 +72,7 @@ def buttonPress():
     drinks = {"Tequila Shot":(0,3,0,0),"Vodka Shot":(3,0,0,0),"Margarita":(0,3,9,0),"Winter Tropic":(3,0,3,3), "Vodka-Cranberry":(3,0,0,9),"Tequila Sunrise":(0,3,0,9),"Vodarita":(3,0,9,0),"Scarlet Knight Shot":(2,0,1,0)}
     bzlvl = {"Normal":1,"Extra Boozy":2}
     #if select ---
-    if select in drinks && select2 in bzlvl:
+    if select in drinks and select2 in bzlvl:
         counter1 = halfCount * drinks[select][0] * bzlvl[select2]
         counter2 = halfCount * drinks[select][1] * bzlvl[select2]
         counter3 = halfCount * drinks[select][2]
@@ -99,7 +99,7 @@ def buttonPress():
                 motor2.off()
                 motor3.off()
                 motor4.off()
-                if (counter1 == 0 && counter2 == 0 && counter3 == 0 && counter4 == 0):
+                if (counter1 == 0 and counter2 == 0 and counter3 == 0 and counter4 == 0):
                     break
                 sleep(0.001)
             except KeyboardInterrupt:
