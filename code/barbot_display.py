@@ -64,94 +64,137 @@ def buttonPress():
     select = checkRadio()
     select2 = checkRadio2()
     print(select + "\n" + select2)
+    # Counters 
     halfCount= 12319
     counter1 = 0
     counter2 = 0
     counter3 = 0
     counter4 = 0
-    if(select == "Margarita" && select2 = "Normal" ):
-    	counter2 = halfCount*2 #1 oz teq
-    	counter3 = halfCount*6 #3 oz marg mix
-    	try:
-    		if(counter2 != 0):
-    			motor2.on()
-    			counter2 = counter2 - 1
-    		
-    			
-    		if(counter3 != 0):
-    			motor3.on()
-    			counter3 = counter3 - 1
-    		
-    		
-    		sleep(0.001)
-    		motor2.off()
-    		motor3.off()
-    		sleep(0.001)
-    		if(counter2 == 0 && counter3 ==0):
-    			counter1 = 0
-    			counter2 = 0
-    			counter3 = 0
-    			counter4 = 0
-    			break
+    # Normal Strength
+    if (select2 == "Normal"):
 
-    	except KeyboardInterrupt:
-    		print("Catch 1")
+    	if(select == "Margarita"):
+	    	counter2 = halfCount*2 #1 oz teq
+	    	counter3 = halfCount*6 #3 oz marg mix
+	    	while True: 
+		    	try:
+		    		if(counter2 != 0):
+		    			motor2.on()
+		    			counter2 = counter2 - 1
+		    		
+		    			
+		    		if(counter3 != 0):
+		    			motor3.on()
+		    			counter3 = counter3 - 1
+		    		
+		    		
+		    		sleep(0.001)
+		    		motor2.off()
+		    		motor3.off()
+		    		sleep(0.001)
 
-    if(select == "Margarita" && select2 = "Extra Boozy" ):
+		    		if(counter2 == 0 && counter3 ==0):
+		    			counter1 = 0
+		    			counter2 = 0
+		    			counter3 = 0
+		    			counter4 = 0
+		    			motor2.off()
+		    			motor3.off()
+		    			break
 
-    if(select == "Vodka-Cranberry" && select2 = "Normal" ):
-		counter1 = halfCount*2 #1 oz vodka
-    	counter4 = halfCount*9 #4.5 oz cranberry
-    	try:
-    		if(counter1 != 0):
-    			motor1.on() #vodka
-    			counter1 = counter1 - 1
-    		
-    			
-    		if(counter4 != 0):
-    			motor4.on() #cranberry
-    			counter4 = counter4 - 1
-    		
-    		
-    		sleep(0.001)
-    		motor1.off()
-    		motor4.off()
-    		sleep(0.001)
-    		if(counter1 == 0 && counter4 ==0):
-    			counter1 = 0
-    			counter2 = 0
-    			counter3 = 0
-    			counter4 = 0
-    			break
+		    	except KeyboardInterrupt:
+		    		print("Catch 1")
 
-    	except KeyboardInterrupt:
-    		print("Catch 3")
 
-    if(select == "Vodka-Cranberry" && select2 = "Extra Boozy" ):
+		if(select == "Vodka-Cranberry"):
+			counter1 = halfCount*2 #1 oz vodka
+	    	counter4 = halfCount*9 #4.5 oz cranberry
+	    	while True:
+		    	try:
+		    		if(counter1 != 0):
+		    			motor1.on() #vodka
+		    			counter1 = counter1 - 1
+		    		
+		    			
+		    		if(counter4 != 0):
+		    			motor4.on() #cranberry
+		    			counter4 = counter4 - 1
+		    		
+		    		
+		    		sleep(0.001)
+		    		motor1.off()
+		    		motor4.off()
+		    		sleep(0.001)
+		    		if(counter1 == 0 && counter4 ==0):
+		    			counter1 = 0
+		    			counter2 = 0
+		    			counter3 = 0
+		    			counter4 = 0
+		    			motor1.off()
+		    			motor4.off()
+		    			break
 
-    if(select == "Winter Tropic" && select2 = "Normal" ):
+		    	except KeyboardInterrupt:
+		    		print("Catch 2")
 
-    if(select == "Winter Tropic" && select2 = "Extra Boozy" ):
 
-    if(select == "Tequila Sunrise" && select2 = "Normal" ):
+	    if(select == "Winter Tropic"):
+	    	counter1 = halfCount*3 #1.5 oz vodka
+	    	counter3 = halfCount*3 #1.5 oz marg mix
+	    	counter4 = halfCount*3 #1.5 oz cranberry
+	    	while True:
+		    	try:
+		    		if(counter1 != 0):
+		    			motor1.on() #vodka
+		    			counter1 = counter1 - 1
+		    		
+		    		if(counter3 != 0):
+		    			motor1.on() #marg mix
+		    			counter1 = counter1 - 1
 
-    if(select == "Tequila Sunrise" && select2 = "Extra Boozy" ):
+		    		if(counter4 != 0):
+		    			motor4.on() #cranberry
+		    			counter4 = counter4 - 1
+		    		
+		    		
+		    		sleep(0.001)
+		    		motor1.off()
+		    		motor3.off()
+		    		motor4.off()
+		    		sleep(0.001)
+		    		if(counter1 == 0 && counter4 ==0):
+		    			counter1 = 0
+		    			counter2 = 0
+		    			counter3 = 0
+		    			counter4 = 0
+		    			motor1.off()
+		    			motor3.off()
+		    			motor4.off()
+		    			break
 
-    if(select == "Vodarita" && select2 = "Normal" ):
+		    	except KeyboardInterrupt:
+		    		print("Catch 3")
 
-    if(select == "Vodarita" && select2 = "Extra Boozy" ):
+	    if(select == "Vodarita"):
+	    if(select == "Tequila Sunrise"):
+	    if(select == "Tequila Shot"):
+	    if(select == "Vodka Shot"):
+	    if(select == "Scarlet Knight Shot"):
 
-    if(select == "Tequila Shot" && select2 = "Normal" ):
 
-    if(select == "Tequila Shot" && select2 = "Extra Boozy" ):
+    if(select2 == "Extra Boozy"):
 
-    if(select == "Vodka Shot" && select2 = "Normal" ):
+    	if(select == "Margarita"):
 
-    if(select == "Vodka Shot" && select2 = "Extra Boozy" ):
+    	if(select == "Vodka-Cranberry"):
 
-    if(select == "Scarlet Knight Shot" && select2 = "Normal" ):
+    	if(select == "Winter Tropic"): 
 
-    if(select == "Scarlet Knight Shot" && select2 = "Extra Boozy" ):
+    	if(select == "Tequila Sunrise"):
+    	if(select == "Vodarita" ):
+    	if(select == "Tequila Shot"):
+    	if(select == "Vodka Shot"):
+    	if(select == "Scarlet Knight Shot"):
 
 
 
