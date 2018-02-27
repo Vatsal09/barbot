@@ -1,6 +1,8 @@
 # barbot
 
-Barbot is an automated cocktail mixing and dispensing machine
+Barbot is an automated cocktail mixing and dispensing machine.
 
-Contributors: 
+Awards: ECE Research Awards Day: Best Poster
+
+Contributors: Vatsal Pandya, Stephen Innis, Michael Lacsamana, Zac Csorny
 
